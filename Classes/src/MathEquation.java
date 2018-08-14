@@ -1,25 +1,27 @@
 public class MathEquation {
 
-    public double leftVals;
-    public double rightVals;
-    public char opCodes;
-    public double results;
+    public double leftVal;
+    public double rightVal;
+    public char opCode;
+    public double result;
 
     public void execute() {
 
-        switch (opCodes[i]) {
+        switch (opCode) {
             case 'a':
-                results[i] = leftVals[i] + rightVals[i];
+                result = leftVal + rightVal;
                 break;
             case 'd':
-                results[i] = rightVals[i] != 0.0 ? leftVals[i] / rightVals[i] : 0.0;
+                result = rightVal != 0.0 ? leftVal / rightVal : 0.0;
                 break;
             case 's':
-                results[i] = leftVals[i] - rightVals[i];
+                result = leftVal - rightVal;
                 break;
             case 'm':
-                results[i] = leftVals[i] * rightVals[i];
+                result = leftVal * rightVal;
                 break;
+                default:
+                    System.out.println("Error - Invalid operation");
         }
     }
 }
